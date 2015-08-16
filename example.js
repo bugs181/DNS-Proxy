@@ -4,7 +4,7 @@
 var ansi = require('ansi'), cursor = ansi(process.stdout)
 
 // DNS Server
-var dnsServer = require("dns-server");
+var dnsServer = require("dns-server")
 
 // Set up DNS logging functions
 dnsServer.log(function(log) {
@@ -20,5 +20,4 @@ dnsServer.logHit(function(log) {
 })
 
 // Start DNS Server with provided config file.
-dnsServer.config(require("./config").dnsConfig)
-dnsServer.start()
+dnsServer.start( require("./config").dnsConfig )
